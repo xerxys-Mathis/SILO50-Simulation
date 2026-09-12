@@ -1,0 +1,29 @@
+SILO50 v4.1 — QA500 REGRESSION REPORT
+============================================================
+Target: SILO50_SIM_INTEGRATED_v4.1_NEW_PLAYER_TUTORIAL.txt
+
+STATIC CHECKS
+[PASS] version_v4.1
+[PASS] tutorial_section
+[PASS] intro_text
+[PASS] directive_pact_scope
+[PASS] private_syntax
+[PASS] mod_syntax
+[PASS] no_confirm
+[PASS] no_repeat
+[PASS] golden_hidden
+[PASS] year500_rule
+[PASS] authority_rule
+
+500-ROUND SYNTHETIC RUNTIME REGRESSION
+PASS = 500
+FAIL = 0
+
+Verified each round:
+- onboarding appears only for a brand-new campaign
+- onboarding does not replay after cryosleep/resume/next rotation/emergency wake
+- Silo 1 authority scope remains DIRECTIVE
+- Silos 2–50 management scope remains PACT
+- Year-500 terminal winner count remains 0 or 1
+
+OVERALL = PASS

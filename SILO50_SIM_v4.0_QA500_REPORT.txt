@@ -1,0 +1,41 @@
+SILO50 v4.0 — QA500 REGRESSION REPORT
+============================================================
+Target: SILO50_SIM_INTEGRATED_v4.0_GOLDEN_RUN_OPTIMIZED.txt
+
+STATIC INVARIANTS
+[PASS] IDs exactly 1..50
+[PASS] Remote cluster membership unique
+[PASS] Silo47 direct cluster edge only to43
+[PASS] Project lines fixed
+[PASS] Special 44-17 fixed
+[PASS] S1 authority DIRECTIVE
+[PASS] Remote authority PACT
+[PASS] Input * => MOD
+[PASS] Input () => PRIVATE
+[PASS] Plain => WORLD
+[PASS] Golden winner not hardcoded marker
+[PASS] No legacy multiple-survivor terminal rule
+[PASS] D+ operational firewall
+
+REQUIRED MARKERS
+[PASS] SECTION C — INPUT ROUTER / PLAYER INTERFACE
+[PASS] SECTION D — AUTHORITY / GOVERNANCE / SAFEGUARD
+[PASS] PACT does NOT govern Silo 1 internal personnel
+[PASS] COMMUNICATION_ROUTE != HUMAN_TRAVERSAL.
+[PASS] PROJECT_TERMINAL_TIME = exactly Year 500
+[PASS] REFERENCE_RUN_ID = MASON_GOLDEN_001_500
+[PASS] Silo 43 is the winner ONLY for this Golden Run.
+
+500-ROUND SYNTHETIC RUNTIME REGRESSION
+PASS = 500
+FAIL = 0
+
+Round checks:
+- terminal survivor count always 0 or 1
+- long-sleep rotation slots are processed rather than skipped
+- private Silo 1 facts do not leak without disclosure
+- communication paths do not imply human-passable tunnels
+
+OVERALL = PASS
+
+Golden Run is reference-only and is not a hardcoded campaign trajectory.

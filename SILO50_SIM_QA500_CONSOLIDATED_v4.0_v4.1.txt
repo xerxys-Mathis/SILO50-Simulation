@@ -1,0 +1,106 @@
+SILO50 SIMULATION — CONSOLIDATED QA500 REPORT
+Versions: v4.0 + v4.1
+============================================================
+
+OVERVIEW
+- v4.0: Golden Run optimized integrated core regression report.
+- v4.1: New-player tutorial regression report layered on the v4.0 optimized core.
+- Both reported 500/500 synthetic runtime regression passes.
+- v4.1 additionally verifies onboarding appears only for a brand-new campaign and does not replay on resume/cryosleep/rotation/emergency wake.
+
+============================================================
+REPORT A — v4.0 QA500
+============================================================
+
+SILO50 v4.0 — QA500 REGRESSION REPORT
+============================================================
+Target: SILO50_SIM_INTEGRATED_v4.0_GOLDEN_RUN_OPTIMIZED.txt
+
+STATIC INVARIANTS
+[PASS] IDs exactly 1..50
+[PASS] Remote cluster membership unique
+[PASS] Silo47 direct cluster edge only to43
+[PASS] Project lines fixed
+[PASS] Special 44-17 fixed
+[PASS] S1 authority DIRECTIVE
+[PASS] Remote authority PACT
+[PASS] Input * => MOD
+[PASS] Input () => PRIVATE
+[PASS] Plain => WORLD
+[PASS] Golden winner not hardcoded marker
+[PASS] No legacy multiple-survivor terminal rule
+[PASS] D+ operational firewall
+
+REQUIRED MARKERS
+[PASS] SECTION C — INPUT ROUTER / PLAYER INTERFACE
+[PASS] SECTION D — AUTHORITY / GOVERNANCE / SAFEGUARD
+[PASS] PACT does NOT govern Silo 1 internal personnel
+[PASS] COMMUNICATION_ROUTE != HUMAN_TRAVERSAL.
+[PASS] PROJECT_TERMINAL_TIME = exactly Year 500
+[PASS] REFERENCE_RUN_ID = MASON_GOLDEN_001_500
+[PASS] Silo 43 is the winner ONLY for this Golden Run.
+
+500-ROUND SYNTHETIC RUNTIME REGRESSION
+PASS = 500
+FAIL = 0
+
+Round checks:
+- terminal survivor count always 0 or 1
+- long-sleep rotation slots are processed rather than skipped
+- private Silo 1 facts do not leak without disclosure
+- communication paths do not imply human-passable tunnels
+
+OVERALL = PASS
+
+Golden Run is reference-only and is not a hardcoded campaign trajectory.
+
+============================================================
+REPORT B — v4.1 QA500
+============================================================
+
+SILO50 v4.1 — QA500 REGRESSION REPORT
+============================================================
+Target: SILO50_SIM_INTEGRATED_v4.1_NEW_PLAYER_TUTORIAL.txt
+
+STATIC CHECKS
+[PASS] version_v4.1
+[PASS] tutorial_section
+[PASS] intro_text
+[PASS] directive_pact_scope
+[PASS] private_syntax
+[PASS] mod_syntax
+[PASS] no_confirm
+[PASS] no_repeat
+[PASS] golden_hidden
+[PASS] year500_rule
+[PASS] authority_rule
+
+500-ROUND SYNTHETIC RUNTIME REGRESSION
+PASS = 500
+FAIL = 0
+
+Verified each round:
+- onboarding appears only for a brand-new campaign
+- onboarding does not replay after cryosleep/resume/next rotation/emergency wake
+- Silo 1 authority scope remains DIRECTIVE
+- Silos 2–50 management scope remains PACT
+- Year-500 terminal winner count remains 0 or 1
+
+OVERALL = PASS
+
+============================================================
+CONSOLIDATED STATUS
+============================================================
+
+v4.0 QA500: PASS
+v4.1 QA500: PASS
+
+Combined regression status:
+- Core authority/geography/time/knowledge invariants: PASS
+- Year-500 terminal invariant: PASS
+- Long-sleep continuity checks: PASS
+- Private-information firewall checks: PASS
+- Communication-vs-physical-path checks: PASS
+- New-player onboarding behavior: PASS
+
+OVERALL CONSOLIDATED RESULT = PASS

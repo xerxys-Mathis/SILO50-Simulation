@@ -1,0 +1,9 @@
+{
+  "name": "SILO50 Simulation",
+  "version": "4.1",
+  "entrypoint": "src/SILO50_SIM_INTEGRATED_v4.1_NEW_PLAYER_TUTORIAL.txt",
+  "qa_latest": "qa/SILO50_SIM_v4.1_QA500_REPORT.txt",
+  "qa_consolidated": "qa/SILO50_SIM_QA500_CONSOLIDATED_v4.0_v4.1.txt",
+  "golden_run": "docs/GOLDEN_RUN.md",
+  "license": "No open-source license included; see LICENSE-NOTICE.md"
+}
